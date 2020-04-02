@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='sundarta.css')}}" >
+    <title>Super Geocoder</title>
+  </head>
+  <body>
+    <h1>Super Geocoder ka beta</h1>
+    <p>Please upload your CSV file. The values containing address should be in a column named address or Address</p>
+    <br>
+    <form action="http://127.0.0.1:5000/success-table" method="POST">
+      <input type="file" accept=".csv" onchange="Read(this.files)"/>
+      <input type="submit" value="submit"/>
+    <table border=1 align="center">
+      {%for i in range(n)%}
+      <tr>
+        <th>{{id[i]}}</th>
+        <th>{{add[i]}}</th>
+        <th>{{name[i]}}</th>
+        <th>{{emp[i]}}</th>
+        <th>{{lon[i]}}</th>
+        <th>{{lat[i]}}</th>
+      </tr>
+      {%endfor%}
+    </table>
+  </form>
+    <!--<form action=a method="get">
+          <button type="submit" value="Download">Download</button>
+    </form>-->
+
+
+
+  </body>
+</html>

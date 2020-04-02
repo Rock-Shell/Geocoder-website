@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='sundarta.css')}}" >
+    <title>Super Geocoder</title>
+  </head>
+  <body>
+    <h1>Super Geocoder</h1>
+    <p>Please upload your CSV file. The values containing address should be in a column named address or Address</p>
+    <br>
+    <form action="http://127.0.0.1:5000/success-table" method="post" enctype="multipart/form-data">
+      <input type="file" accept=".csv" name="myfile">
+      <input type="submit" value="submit" />
+    </form>
+  </body>
+</html>
